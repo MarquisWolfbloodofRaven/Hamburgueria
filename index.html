@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HamburgueriaZ - Faça seu pedido!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho com logo -->
+        <header class="header">
+            <img src="logo.png" alt="HamburgueriaZ" class="logo" id="logo">
+            <h1 class="app-title">HamburgueriaZ</h1>
+            <p class="app-subtitle">O melhor hambúrguer da cidade!</p>
+        </header>
+
+        <!-- Área principal do app -->
+        <main class="main-content">
+            <section class="section">
+                <h2 class="section-title estilo-texto">FAÇA SEU PEDIDO</h2>
+                
+                <div class="form-group">
+                    <label for="nome" class="estilo-texto">Nome do cliente:</label>
+                    <input type="text" id="nome" class="form-input" placeholder="Digite seu nome">
+                </div>
+                
+                <div class="form-group">
+                    <h3 class="estilo-texto">ADICIONAIS:</h3>
+                    <div class="checkboxes">
+                        <label class="checkbox">
+                            <input type="checkbox" id="bacon" value="2.00">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Bacon (+ R$ 2,00)</span>
+                        </label>
+                        
+                        <label class="checkbox">
+                            <input type="checkbox" id="queijo" value="2.00">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Queijo (+ R$ 2,00)</span>
+                        </label>
+                        
+                        <label class="checkbox">
+                            <input type="checkbox" id="onion" value="3.00">
+                            <span class="checkbox-custom"></span>
+                            <span class="checkbox-label">Onion Rings (+ R$ 3,00)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <h3 class="estilo-texto">QUANTIDADE:</h3>
+                    <div class="quantity-selector">
+                        <button id="decrement" class="btn-quantity">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <div class="quantity-display" id="quantity">1</div>
+                        <button id="increment" class="btn-quantity">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <h3 class="estilo-texto">RESUMO DO PEDIDO:</h3>
+                    <div class="order-summary" id="resumo">
+                        Preencha os dados acima para ver o resumo do pedido
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <h3 class="estilo-texto">PREÇO TOTAL:</h3>
+                    <div class="total-price" id="total">R$ 20,00</div>
+                </div>
+                
+                <div class="button-group">
+                    <button id="enviarPedido" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> ENVIAR PEDIDO
+                    </button>
+                    <button id="enviarEmail" class="btn-secondary">
+                        <i class="fas fa-envelope"></i> ENVIAR POR E-MAIL
+                    </button>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <p>Aula Prática - Desenvolvimento Mobile | HamburgueriaZ Web MVP</p>
+        </footer>
+    </div>
+
+    <!-- Modal de confirmação -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <h3>Pedido Enviado!</h3>
+            <p id="modalMessage">Seu pedido foi registrado com sucesso.</p>
+            <button id="closeModal" class="btn-primary">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
